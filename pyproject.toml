@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "workspace-risk-agent"
+version = "0.1.0"
+description = "A Google ADK + Gemini agent that finds project risks in Google Sheets and Docs through read-only, allowlisted tools."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Eswar Varun S", email = "s.eswarvarun@gmail.com" }]
+dependencies = [
+    "google-adk>=2.11",
+    "google-api-python-client>=2.150",
+    "google-auth>=2.30",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.setuptools.packages.find]
+include = ["risk_agent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::UserWarning"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "S"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "E501"]
