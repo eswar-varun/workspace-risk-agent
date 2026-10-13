@@ -1,0 +1,15 @@
+ID,Task,Workstream,Owner,Status,Due,Depends on,Last update
+PLAT-1,Provision staging database,Platform,Priya,Done,2026-10-02,,2026-10-01
+PLAT-2,Set up CI pipeline for services,Platform,Arjun,In progress,2026-10-16,PLAT-1,2026-10-12
+PLAT-3,Load-test the API gateway,Platform,Arjun,Not started,2026-10-23,PLAT-2,2026-10-05
+PAY-4,Integrate payment provider sandbox,Payments,Meera,Blocked,2026-10-09,,2026-10-03
+PAY-5,Refund workflow,Payments,Meera,Not started,2026-10-20,PAY-4,2026-10-03
+PAY-6,Reconciliation report,Payments,Rahul,Not started,2026-10-27,PAY-5,2026-10-08
+PAY-7,Payments go-live checklist,Payments,Rahul,Not started,2026-10-30,"PAY-6, PLAT-3",2026-10-08
+ONB-8,KYC document upload,Onboarding,Sneha,In progress,2026-10-10,,2026-10-11
+ONB-9,Welcome email templates,Onboarding,Sneha,In progress,2026-10-15,,2026-10-12
+ONB-10,Onboarding analytics dashboard,Onboarding,Sneha,Not started,2026-10-17,ONB-8,2026-10-04
+ONB-11,Accessibility review,Onboarding,Sneha,Not started,2026-10-18,,2026-10-12
+PLAT-12,Rotate service credentials,Platform,Priya,In progress,2026-10-14,PLAT-13,2026-10-12
+PLAT-13,Secrets manager migration,Platform,Priya,In progress,2026-10-21,PLAT-12,2026-10-12
+ONB-14,Document verification vendor,Onboarding,Arjun,Not started,2026-10-22,PAY-99,2026-10-09
